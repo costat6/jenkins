@@ -9,7 +9,7 @@ pipeline {
             steps {
 				
             	sh "echo 'You need to install curl'"
-				sh "apt-get update; apt-get install curl"
+				sh "apk add; apt-get install curl"
                 sh "curl www.google.com"
             }
         }
