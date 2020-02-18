@@ -5,5 +5,15 @@ pipeline {
 		}
 	}
     stages {
+		stage('build'){
+			when {
+				
+			}
+		}
+		stage('test'){
+			when {
+			
+			}
+		}
     }
 }
