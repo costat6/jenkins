@@ -1,10 +1,5 @@
 pipeline {
-    agent none {
-		dockerfile {
-			dir '003 - Defining Execution Environments'
-			filename '04 - Dockerfile - Multiple Agents using Dockerfile'
-		}
-	}
+    agent none 
     stages {
 		stage('build java'){
 			agent {
