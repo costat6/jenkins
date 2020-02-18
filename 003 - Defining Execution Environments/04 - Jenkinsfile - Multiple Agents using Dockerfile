@@ -1,6 +1,26 @@
 pipeline {
-    agent { 
+    agent none {
+		dockerfile {
+			dir '003 - Defining Execution Environments'
+			filename '04 - Dockerfile - Multiple Agents using Dockerfile'
+		}
 	}
     stages {
+		stage('build java'){
+			agent {
+				dockerfile {
+					dir '003 - Defining Execution Environments'
+					filename '04 - Dockerfile - Multiple Agents using Dockerfile'
+				}
+			}
+		}
+		stage('build node'){
+			agent {
+				dockerfile {
+					dir '003 - Defining Execution Environments'
+					filename '04 - Dockerfile - Multiple Agents using Dockerfile'
+				}
+			}
+		}		
     }
 }
