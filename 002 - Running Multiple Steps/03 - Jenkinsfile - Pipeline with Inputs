@@ -1,0 +1,19 @@
+pipeline {
+	parameters{
+		string(name: 'NAME', defaultValue: 'Name', description: '')
+		string(name: 'AGE', defaultValue: '0', description: '')
+	}
+    agent { 
+		docker { 
+			image 'alpine:latest' 
+		}
+	}
+    stages {
+        stage('build') {
+            steps {
+                echo "$NAME"
+                echo "$AGE"
+            }
+        }
+    }
+}
