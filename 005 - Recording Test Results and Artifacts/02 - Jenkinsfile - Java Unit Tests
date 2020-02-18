@@ -7,13 +7,9 @@ pipeline {
     stages {
         stage('tests') {
             steps {
-                sh "mvn test"
+                sh "mvn install \
+					-f '005 - Recording Test Results and Artifacts/02 - Java Unit Tests/'"
             }
-        }
-    }
-	post {
-        always {
-            junit 'target/surefire-reports/*.xml' 
         }
     }
 }
