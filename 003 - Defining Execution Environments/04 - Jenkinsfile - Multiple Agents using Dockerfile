@@ -8,6 +8,9 @@ pipeline {
 					filename '04 - Dockerfile - Multiple Agents using Dockerfile'
 				}
 			}
+			steps {
+                sh 'mvn --version'
+            }
 		}
 		stage('build node'){
 			agent {
@@ -16,6 +19,9 @@ pipeline {
 					filename '04 - Dockerfile - Multiple Agents using Dockerfile'
 				}
 			}
+			steps {
+                sh 'nvm --version'
+            }
 		}		
     }
 }
