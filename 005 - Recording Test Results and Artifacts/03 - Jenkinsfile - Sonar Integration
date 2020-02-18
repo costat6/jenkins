@@ -15,7 +15,7 @@ pipeline {
 			steps {
                 sh "mvn install \
 					-f '005 - Recording Test Results and Artifacts/03 - Sonar Integration/' \
-					org.sonarsource.scanner.maven:sonar-maven-plugin:3.6"
+					org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746"
 			}
 		}
     }
