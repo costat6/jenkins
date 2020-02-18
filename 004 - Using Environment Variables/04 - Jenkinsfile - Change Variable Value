@@ -24,7 +24,7 @@ pipeline {
 					echo "Value of env.NUMBER_OF_ISSUES_TEST3 after update: " + env.NUMBER_OF_ISSUES_TEST3
 					
 					echo "Value of env.NUMBER_OF_ISSUES_TEST4 before update: " + env.NUMBER_OF_ISSUES_TEST4
-					NUMBER_OF_ISSUES_TEST4=10
+					env.NUMBER_OF_ISSUES_TEST4=10
 					echo "Value of env.NUMBER_OF_ISSUES_TEST4 after update: " + env.NUMBER_OF_ISSUES_TEST4
 				}
 			}
